@@ -1,18 +1,29 @@
 import React, { useState } from "react";
+import { FaCheck } from "react-icons/fa";
+import { toast } from "react-toastify";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, cartProducts, setCartProducts }) => {
     const [isBuying, setIsBuying] = useState(false);
 
     const handleBuyClick = () => {
         setIsBuying(true);
-         
+        setCartProducts([...cartProducts, product]);
+        toast.success(`${product.name} added to cart`)
+
     };
 
     return (
-        <div className="card rounded-lg bg-base-100 shadow-sm">
+        <div className="card rounded-lg bg-base-100 shadow-sm hover:scale-105 hover:shadow-blue-700 transition duration-300">
             <div className="card-body">
                 <div className="flex justify-end">
-                    <span className="badge badge-xs bg-[#fef3c6] text-[#bb4d00] p-3">{product.tag}</span>
+                    <span className={`px-2 py-1 rounded-full  text-xs ${product.tag === "Popular"
+                            ? "text-purple-500 bg-indigo-100 "
+                            : product.tag === "New"
+                                ? "bg-[#DBFCE7] text-[#0A883E]"
+                                : product.tag === "Best seller"
+                                    ? "text-[#BB4D00] bg-[#FEF3C6]"
+                                    : "bg-gray-500"
+                        }`}>{product.tag}</span>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-full w-16 h-16 flex items-center justify-center ">
                     <img src={product.icon} className="w-10" alt="Writing Tool" />
@@ -40,7 +51,9 @@ const ProductCard = ({ product }) => {
 
 
                 <div className="mt-6">
-                    <button onClick={handleBuyClick}  className={`btn ${isBuying === false ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : "bg-green-500"} text-[16px] text-white btn-block rounded-full`}>{isBuying ? "Purchased" : "Buy Now"}</button>
+                    <button onClick={handleBuyClick} className={`btn ${isBuying === false ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : "bg-green-500"} text-[16px] text-white btn-block rounded-full`}>{isBuying ? <>
+                        <FaCheck />  Added to Cart
+                    </> : "Buy Now"}</button>
                 </div>
             </div>
         </div>

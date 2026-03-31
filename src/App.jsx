@@ -1,11 +1,12 @@
 
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
-import Banner from './components/banner/Bannner'
+import Banner from './components/banner/Banner'
 import Navbar from './components/navbar/Navbar'
 import PreDigiTools from './components/PreDigiTools/PreDigiTools'
 import Stats from './components/Stats/Stats'
 import Steps from './components/Steps/Steps'
+import Pricing from './components/Pricing/Pricing'
 
 const fetchData = async () => {
   const res = await fetch('/data.json')
@@ -15,15 +16,23 @@ const fetchData = async () => {
 function App() {
   
   const DataPromise = fetchData();
+  const [cartProducts, setCartProducts] = useState([]);
   return (
     <>
-    <Navbar />
+    <Navbar cartProducts={cartProducts}/>
     <Banner />
     <Stats />
     <Suspense fallback={<div className='mt-7 flex justify-center items-center'><span className="loading loading-ring loading-xl "></span></div>}>
-      <PreDigiTools DataPromise={DataPromise} />
+      <PreDigiTools DataPromise={DataPromise} cartProducts={cartProducts} setCartProducts={setCartProducts} />
     </Suspense>
     <Steps/>
+    <Pricing/>
+
+
+
+
+
+    
     
     </>
   )

@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "./ProductCard";
 
 
-const DigiToolsCard = ({ Products }) => {
+const DigiToolsCard = ({ Products, cartProducts, setCartProducts }) => {
     // console.log(Products);
     return (
         <div>
@@ -10,7 +10,7 @@ const DigiToolsCard = ({ Products }) => {
                 {
                     Products.map((product) => {
                         return (
-                            <ProductCard product={product} key={product.id} />
+                            <ProductCard product={product} key={product.id} cartProducts={cartProducts} setCartProducts={setCartProducts} />
                         )
                     })
                 }

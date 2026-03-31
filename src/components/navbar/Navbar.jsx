@@ -1,7 +1,8 @@
 import React from "react";
-import ShoppingCart from "../../assets/products/shopping-cart.png";
 
-const Navbar = () => {
+import ShoppingImg from "../../assets/products/shopping-cart.png";
+
+const Navbar = ( { cartProducts } ) => {
   return (
     <div className=" bg-base-100 shadow-sm w-full ">
       <div className="flex justify-between items-center w-[85%] mx-auto py-3">
@@ -30,8 +31,13 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-5">
-          <div>
-            <img src={ShoppingCart} alt="Shopping Cart" />
+          <div className="relative">
+            <img src={ShoppingImg} alt="Shopping Cart" className="text-3xl" />
+            {cartProducts.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-3.5 h-3.5 flex items-center justify-center rounded-full">
+                {cartProducts.length}
+              </span>
+            )}
           </div>
           <p className="text-[#101727] font-semibold cursor-pointer">Login</p>
           <button className="btn text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]  rounded-full">
