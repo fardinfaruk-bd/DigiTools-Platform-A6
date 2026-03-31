@@ -3,8 +3,8 @@ import React from "react";
 const Stats = () => {
     return (
         <div className="w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-15">
-            <div className="w-[60%] mx-auto">
-                <div className="flex justify-between">
+            <div className="w-full md:w-[60%] mx-auto">
+                <div className=" md:flex justify-between">
                     <div className="text-center space-y-3">
                         <h1 className="text-white text-6xl font-extrabold">50k+</h1>
                         <p className="text-2xl font-medium text-[#ffffffc2]">Active Users</p>
