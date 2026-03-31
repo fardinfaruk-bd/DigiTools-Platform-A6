@@ -1,5 +1,6 @@
 import React, { use, useState } from "react";
 import DigiToolsCard from "./DigiToolsCard";
+import CartCard from "./CartCards";
 
 
 const PreDigiTools = ({DataPromise}) => {
@@ -12,8 +13,8 @@ const PreDigiTools = ({DataPromise}) => {
 
     return (
         <div>
-            <div className="w-[95%] md:w-full lg:w-[85%] mx-auto p-30 ">
-                <div className="text-center space-y-8">
+            <div className="w-[95%] md:w-full lg:w-[85%] mx-auto my-30 ">
+                <div className="text-center space-y-8  ">
                     <h1 className="text-5xl font-extrabold">Premium Digital Tools</h1>
                     <p className="text-[#627382]">Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
                 </div>
@@ -21,7 +22,7 @@ const PreDigiTools = ({DataPromise}) => {
                     <button onClick={() => setSelectedBtn("Products")} className={ `${selectedBtn === "Products" ? "btn font-bold rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "rounded-l-none text-[#25065D] font-medium"}`} >Products</button>
                     <button onClick={() => setSelectedBtn("Cart")} className={ `${selectedBtn === "Cart" ? "btn font-bold rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : " text-[#25065D] font-medium"}`}>Cart(0)</button>
                 </div>
-                <DigiToolsCard Products={Products} />
+                {selectedBtn === "Products" ? <DigiToolsCard Products={Products} /> : <CartCard Products={Products} />}
             </div>
         </div>
     )

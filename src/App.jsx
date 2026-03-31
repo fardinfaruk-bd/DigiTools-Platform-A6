@@ -5,6 +5,7 @@ import Banner from './components/banner/Bannner'
 import Navbar from './components/navbar/Navbar'
 import PreDigiTools from './components/PreDigiTools/PreDigiTools'
 import Stats from './components/Stats/Stats'
+import Steps from './components/Steps/Steps'
 
 const fetchData = async () => {
   const res = await fetch('/data.json')
@@ -22,6 +23,7 @@ function App() {
     <Suspense fallback={<div className='mt-7 flex justify-center items-center'><span className="loading loading-ring loading-xl "></span></div>}>
       <PreDigiTools DataPromise={DataPromise} />
     </Suspense>
+    <Steps/>
     
     </>
   )

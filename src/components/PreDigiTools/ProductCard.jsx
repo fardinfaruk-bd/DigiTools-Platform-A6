@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ProductCard = ({ product }) => {
+    const [isBuying, setIsBuying] = useState(false);
+
+    const handleBuyClick = () => {
+        setIsBuying(true);
+         
+    };
+
     return (
         <div className="card rounded-lg bg-base-100 shadow-sm">
             <div className="card-body">
@@ -33,7 +40,7 @@ const ProductCard = ({ product }) => {
 
 
                 <div className="mt-6">
-                    <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-[16px]  text-white btn-block rounded-full">Buy Now</button>
+                    <button onClick={handleBuyClick}  className={`btn ${isBuying === false ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : "bg-green-500"} text-[16px] text-white btn-block rounded-full`}>{isBuying ? "Purchased" : "Buy Now"}</button>
                 </div>
             </div>
         </div>
