@@ -7,6 +7,8 @@ import PreDigiTools from './components/PreDigiTools/PreDigiTools'
 import Stats from './components/Stats/Stats'
 import Steps from './components/Steps/Steps'
 import Pricing from './components/Pricing/Pricing'
+import WorkFlow from './components/WorkFlow/WorkFlow'
+import Footer from './components/Footer/Footer'
 
 const fetchData = async () => {
   const res = await fetch('/data.json')
@@ -27,6 +29,8 @@ function App() {
     </Suspense>
     <Steps/>
     <Pricing/>
+    <WorkFlow/>
+    <Footer/>
 
 
 

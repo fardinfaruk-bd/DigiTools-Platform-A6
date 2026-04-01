@@ -12,7 +12,7 @@ const PreDigiTools = ({DataPromise, cartProducts, setCartProducts}) => {
 
     return (
         <div>
-            <div className="w-[95%] md:w-full lg:w-[85%] mx-auto my-30 ">
+            <div className="w-[85%] md:w-[90%] lg:w-[85%] mx-auto my-30 ">
                 <div className="text-center space-y-8  ">
                     <h1 className="text-5xl font-extrabold">Premium Digital Tools</h1>
                     <p className="text-[#627382]">Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>

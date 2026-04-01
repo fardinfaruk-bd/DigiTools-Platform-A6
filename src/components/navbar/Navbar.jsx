@@ -1,17 +1,21 @@
 import React from "react";
 
 import ShoppingImg from "../../assets/products/shopping-cart.png";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = ( { cartProducts } ) => {
   return (
     <div className=" bg-base-100 shadow-sm w-full ">
-      <div className="flex justify-between items-center w-[85%] mx-auto py-3">
-        <div className="navbar-start">
+      <div className="flex justify-between items-center w-[95%] md:w-[90%] lg:w-[85%] mx-auto py-3">
+
+        <div className="flex items-center gap-5">
+          <GiHamburgerMenu className="block md:hidden" />
           <h1 className="font-bold text-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text">
             DigiTools
           </h1>
         </div>
-        <div className="navbar-center flex">
+
+        <div className="md:block hidden">
           <ul className="menu menu-horizontal text-[16px] px-1 text-[#101727] font-semibold">
             <li>
               <a>Products</a>
@@ -30,7 +34,8 @@ const Navbar = ( { cartProducts } ) => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end flex gap-5">
+
+        <div className="flex items-center gap-5">
           <div className="relative">
             <img src={ShoppingImg} alt="Shopping Cart" className="text-3xl" />
             {cartProducts.length > 0 && (

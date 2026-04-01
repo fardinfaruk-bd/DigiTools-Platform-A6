@@ -12,7 +12,7 @@ const Steps = () => {
                     <h3 className="text-5xl text-[#101727] font-extrabold">Get Started in 3 Steps</h3>
                     <p className="text-[#627382]">Start using premium digital tools in minutes, not hours.</p>
                 </div>
-                <div className="grid grid-cols-3 gap-7.5">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-7.5">
                     <div className="card rounded-lg  bg-base-100 shadow-sm">
                         <div className="card-body p-6 ">
                             <div className="flex justify-end">
