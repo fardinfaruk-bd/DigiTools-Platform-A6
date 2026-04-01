@@ -11,14 +11,14 @@ const Stats = () => {
                         <p className="text-2xl font-medium text-[#ffffffc2]">Active Users</p>
                     </div>
 
-                    <div className=" md:w-20 w-0.5 md:h-0.5 h-20 md:mx-auto  bg-gray-400 opacity-80 hidden md:block"></div>
+                    <div className=" md:w-20 lg:w-0.5 md:h-0.5 lg:h-20 md:mx-auto  bg-gray-400 opacity-80 hidden md:block"></div>
 
                     <div className="text-center space-y-3">
                         <h1 className="text-white text-6xl font-extrabold">200+</h1>
                         <p className="text-2xl font-medium text-[#ffffffc2]">Premium Tools</p>
                     </div>
 
-                    <div className="md:w-20 w-0.5 md:h-0.5 h-20 md:mx-auto bg-gray-400 opacity-80 hidden md:block"></div>
+                    <div className="md:w-20 lg:w-0.5 md:h-0.5 lg:h-20 md:mx-auto  bg-gray-400 opacity-80 hidden md:block"></div>
                     <div className="text-center space-y-3">
                         <h1 className="text-white text-6xl font-extrabold">4.9</h1>
                         <p className="text-2xl font-medium text-[#ffffffc2]">Rating</p>

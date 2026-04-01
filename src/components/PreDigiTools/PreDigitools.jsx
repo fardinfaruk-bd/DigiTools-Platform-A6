@@ -1,10 +1,11 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import DigiToolsCard from "./DigiToolsCard";
 import CartCard from "./CartCards";
 
 
-const PreDigiTools = ({DataPromise, cartProducts, setCartProducts}) => {
-    const Products = use(DataPromise);
+const PreDigiTools = ({data, cartProducts, setCartProducts}) => {
+    const Products = data;
+    
     const [selectedBtn, setSelectedBtn] = useState("Products");
     
 

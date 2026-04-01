@@ -9,7 +9,7 @@ const Banner = () => {
         <div className="hero-content flex-col gap-20 md:gap-20 lg:gap-4  lg:flex-row-reverse">
           <img
             src={BannerImg}
-            className="max-w-sm rounded-lg shadow-2xl"
+            className=" rounded-lg shadow-2xl"
           />
           <div>
 
@@ -34,8 +34,8 @@ const Banner = () => {
               Explore Products
             </p>
             <div className="flex gap-5">
-              <button className="btn btn-primary rounded-full">Explore Products</button>
-              <button className="btn btn-outline rounded-full border-[#4F39F6] text-[#4F39F6] hover:btn-primary hover:text-white"><FaPlay /> <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text hover:text-white">Watch Demo</span></button>
+              <button className="btn btn-primary text-white rounded-full hover:scale-110 transition duration-300">Explore Products</button>
+              <button className="btn btn-outline rounded-full border-[#4F39F6] text-[#4F39F6] hover:btn-primary hover:text-white hover:scale-110 transition duration-300"><FaPlay /> <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text hover:text-white">Watch Demo</span></button>
             </div>
           </div>
         </div>

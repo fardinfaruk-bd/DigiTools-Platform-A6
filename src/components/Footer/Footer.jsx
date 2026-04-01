@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className="bg-black w-full text-white">
             <div>
-                <div className="w-[95%] md:w-[90%] lg:w-[85%] mx-auto space-y-7 pt-30">
+                <div className="w-[80%] md:w-[90%] lg:w-[85%] mx-auto space-y-7 pt-30">
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mx-auto mb-20">
                         <div className="space-y-5">
                             <h1 className="text-3xl font-bold">DigiTools</h1>
@@ -60,13 +60,18 @@ const Footer = () => {
 
                     </div>
                     <hr className="border border-gray-100 opacity-65" />
-                    <div className="md:flex justify-between items-center pb-8">
-                        <p className="text-[#ffffffb3]">© 2026 Digitools. All rights reserved.</p>
-                        <div className="flex items-center  gap-8 text-[#ffffffb3]">
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center pb-8 text-center md:text-left">
+
+                        <p className="text-[#ffffffb3]">
+                            © 2026 Digitools. All rights reserved.
+                        </p>
+
+                        <div className="flex  md:flex-row items-center gap-4 md:gap-8 text-[#ffffffb3] mt-3 md:mt-0">
                             <p>Privacy Policy</p>
                             <p>Terms of Service</p>
                             <p>Cookies</p>
                         </div>
+
                     </div>
                 </div>
             </div>
