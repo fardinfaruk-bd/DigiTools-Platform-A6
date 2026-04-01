@@ -7,6 +7,12 @@ const ProductCard = ({ product, cartProducts, setCartProducts }) => {
 
     const handleBuyClick = () => {
         setIsBuying(true);
+        const isExist = cartProducts.find((item) => item.name === product.name);
+        if (isExist) {
+            toast.error(`${product.name} is already in the cart`);
+            return;
+        }
+        
         setCartProducts([...cartProducts, product]);
         toast.success(`${product.name} added to cart`)
 
