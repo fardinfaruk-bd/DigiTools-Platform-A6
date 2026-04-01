@@ -9,7 +9,7 @@ const Banner = () => {
         <div className="hero-content flex-col gap-20 md:gap-20 lg:gap-4  lg:flex-row-reverse">
           <img
             src={BannerImg}
-            className=" rounded-lg shadow-2xl"
+            className=" rounded-lg w-auto"
           />
           <div>
 

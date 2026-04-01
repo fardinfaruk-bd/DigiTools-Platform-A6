@@ -5,12 +5,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = ( { cartProducts } ) => {
   return (
-    <div className=" bg-base-100 shadow-sm w-full ">
+    <div className=" bg-base-100 shadow-sm ">
       <div className="flex justify-between items-center w-[95%] md:w-[90%] lg:w-[85%] mx-auto py-3">
 
         <div className="flex items-center gap-5">
           <GiHamburgerMenu className="block md:hidden" />
-          <h1 className="font-bold text-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text">
+          <h1 className="font-bold text-2xl md:text-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-transparent bg-clip-text">
             DigiTools
           </h1>
         </div>
@@ -44,7 +44,7 @@ const Navbar = ( { cartProducts } ) => {
               </span>
             )}
           </div>
-          <p className="text-[#101727] font-semibold cursor-pointer">Login</p>
+          <p className="text-[#101727] font-semibold cursor-pointer md:block hidden">Login</p>
           <button className="btn text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]  rounded-full">
             Get Started
           </button>

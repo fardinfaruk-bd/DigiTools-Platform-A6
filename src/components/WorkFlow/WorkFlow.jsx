@@ -5,7 +5,7 @@ const WorkFlow = () => {
         <div className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white py-30 '>
             <div className='w-[85%] mx-auto text-center space-y-10'>
                 <div className='space-y-4'>
-                    <h1 className='text-[40px] font-extrabold text-white'>Ready to Transform Your Workflow?</h1>
+                    <h1 className='text-2xl md:text-[40px] font-extrabold text-white'>Ready to Transform Your Workflow?</h1>
                     <p className='text-white font-normal'>Join thousands of professionals who are already using Digitools to work smarter. <br /> Start your free trial today.</p>
                 </div>
                 <div className='space-y-4'>
