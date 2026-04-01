@@ -3,7 +3,7 @@ import { CiShoppingCart } from "react-icons/ci";
 import { toast } from "react-toastify";
 
 const CartCard = ({ cartProducts, setCartProducts}) => {
-    console.log(cartProducts, "selectedCart");
+    
     const handleDeleteCartProduct = (cartProduct) => {
         const newCartProducts = cartProducts.filter((product) => product.id !== cartProduct.id);
         setCartProducts(newCartProducts);
